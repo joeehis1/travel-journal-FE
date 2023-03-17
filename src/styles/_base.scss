@@ -1,0 +1,55 @@
+@use './variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: $fs-sm;
+    font-family: 'Inter';
+    line-height: 1.25;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.root{
+    min-height: 100vh;
+}
+
+h1{
+    font-size: $fs-md;
+    font-weight: $fw-med;
+    line-height: 1.5;
+    margin: 0;
+}
+
+h2{
+    font-size: $fs-lrg;
+    font-weight: $fw-bold;
+}
+
+a{
+    color: $secondary-clr;
+    &:hover{
+        color:$accent-clr;
+    }
+}
+
+.container{
+    max-width: 550px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+main{
+    margin-block: 6.25rem;
+}

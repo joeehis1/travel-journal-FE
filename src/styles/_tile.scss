@@ -1,0 +1,57 @@
+@use './variables' as *;
+
+.tile{
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr repeat(2, 0.8fr);
+    grid-template-areas: 
+    "img location url url"
+    "img title title title"
+    "img date date date"
+    "img desc desc desc";
+    column-gap: 1.1875rem;
+    padding-block: 1.125rem;
+
+    &:not(:last-child){
+        border-bottom: 1px solid $secondary-clr;
+    }
+
+    .image{
+        grid-area: img;
+        width: 7.8rem;
+        aspect-ratio: 0.7;
+        border-radius: 9px;
+        object-fit: cover;
+    }
+
+    .location{
+        grid-area: location;
+        margin: 0;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+
+        .icon{
+            color: $accent-clr;
+            margin-right: 0.25rem;
+            display: inline-block;
+        }
+    }
+
+    .url{
+        grid-area: url;
+    }
+
+    .title{
+        grid-area: title;
+        margin-top: 0;
+    }
+
+    .date{
+        grid-area: date;
+        margin: 0;
+    }
+
+    .description{
+        grid-area: desc;
+    }
+}

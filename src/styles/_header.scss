@@ -1,0 +1,9 @@
+@use './variables' as *;
+
+
+header{
+    text-align: center;
+    background-color: $accent-clr;
+    color: $light-clr;
+    padding: 1.25rem;
+}
